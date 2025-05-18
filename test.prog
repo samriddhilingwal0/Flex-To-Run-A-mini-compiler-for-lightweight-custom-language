@@ -1,0 +1,58 @@
+int total = 0;
+int i = 0;
+
+repeat (i < 5) {
+    i = i + 1;
+    if (i == 3) {
+        skip;
+    }
+
+    if (i == 4) {
+        stop;
+    }
+
+    total = total + i;
+
+    int inner = 0;
+    repeat (inner < 2) {
+        print("Inner loop:");
+        print(inner);
+        inner = inner + 1;
+    }
+
+    print("Current i:");
+    print(i);
+}
+
+
+print("After first loop:");
+print(total);
+
+int x = 1;
+int y = 2;
+
+repeat (x < 3) {
+    int i=8;
+    x = x + 1;
+    int y = x + 1;
+    print("Inside outer loop:");
+    print(x);
+    print(y);
+
+    repeat (y < 5) {
+        y = y + 1;
+        if (y == 4) {
+            skip;
+        }
+        if (y == 5) {
+            stop;
+        }
+        print("Nested y:");
+        print(y);
+    }
+}
+
+print("Final x:");
+print(x);
+print("Final y:");
+print(y);
