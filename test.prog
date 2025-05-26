@@ -1,0 +1,14 @@
+int n = 10;
+int a = 0;
+int b = 1;
+int count = 0;
+
+print("fibonacci sequence:");
+
+repeat(count < n){
+    print(a);
+    int temp = a + b;
+    a = b;
+    b = temp;
+    count = count + 1;
+}
